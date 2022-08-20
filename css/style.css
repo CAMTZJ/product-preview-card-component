@@ -1,0 +1,157 @@
+:root {
+  --verde: hsl(158, 36%, 37%);
+  --fondo: hsl(30, 38%, 92%);
+  --gris: hsl(228, 12%, 48%);
+  --verdeOscuro: hsl(158, 36%, 32%);
+  --fondoSecundario: hsl(228, 12%, 48);
+  --blanco: hsl(0, 0%, 100%);
+  --negro: rgb(0, 0, 0);
+ 
+  --fuenteFraunces: "Fraunces", serif;
+  --fuenteMontserrat: "Montserrat", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/*  Globales */
+
+body {
+  background-color: var(--fondo);
+}
+
+
+
+.contenedor {
+  width: 35rem;
+  height: 70rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 7% auto 0;
+  background-color: var(--blanco);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.contenedor__img {
+  background-image: url(../images/image-product-mobile.jpg);
+  background-size: cover;
+  background-position: 50%;
+  grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+  .contenedor {
+    width: 56rem;
+    height: 43rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin: 20rem auto 0;
+    background-color: var(--blanco);
+    border-radius: 0.7rem;
+    overflow: hidden;
+  }
+  .contenedor__img {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+  }
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+@media (min-width: 768px) {
+    .descripcion{
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+ }
+
+.producto__tipo {
+  color: var(--gris);
+  font-family: var(--fuenteMontserrat);
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.producto__nombre {
+  font-family: var(--fuenteFraunces);
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 2rem 2rem 0 0;
+  line-height: 1;
+}
+.producto__descripcion {
+  color: var(--gris);
+  font-family: var(--fuenteMontserrat);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+  max-lines: 4;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.producto__precio {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.producto__precio--descuento {
+  color: var(--verde);
+  font-size: 3.2rem;
+  font-weight: 700;
+  font-family: var(--fuenteFraunces);
+  margin: 2rem 0;
+}
+.producto__precio--precio {
+  color: var(--gris);
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  padding-left: 1rem;
+}
+
+.boton {
+  width: 100%;
+  height: 4.5rem;
+  color: var(--blanco);
+  background-color: var(--verde);
+  border: none;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.boton:hover{
+  background-color: var(--verdeOscuro);
+}
+.boton__carrito {
+  width: 1.2rem;
+}
+.boton span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: var(--fuenteMontserrat);
+  padding-left: 0.5rem;
+}
+
+/* Footer  */
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
